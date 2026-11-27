@@ -12,15 +12,20 @@ The feeds are not clean. Expect what real feeds do: the same data arriving more 
 
 ## Before you start
 
-1. **Create your own Google Cloud project.** New accounts get free credit, which is far more than this needs.
-2. **Set a budget alert** (Billing → Budgets & alerts) at £10, so nothing surprises you.
-3. **Use one region throughout:** `europe-west2` (London) for buckets, BigQuery and services.
-4. **Generate the data** (Cloud Shell has Python ready):
+1. **Make your own copy of this repository.**
+   - Click **Use this template → Create a new repository** (top right of this page).
+   - Create it in your own GitHub account, name it `gcp-de-assessment-<your first name>` and set it to **Private**.
+   - In your new repository, go to **Settings → Collaborators → Add people** and add **`arcinsights`**. That's how we see your work.
+   - Do all your work there. Don't fork this repository or open pull requests against it.
+2. **Create your own Google Cloud project.** New accounts get free credit, which is far more than this needs.
+3. **Set a budget alert** (Billing → Budgets & alerts) at £10, so nothing surprises you.
+4. **Use one region throughout:** `europe-west2` (London) for buckets, BigQuery and services.
+5. **Generate the data** (Cloud Shell has Python ready):
    ```bash
    pip install -r requirements.txt
    python data/generate_data.py --out output
    ```
-5. **Never commit service-account key files.** The `.gitignore` blocks the common ones; use your own login or the service's identity instead.
+6. **Never commit service-account key files.** The `.gitignore` blocks the common ones; use your own login or the service's identity instead.
 
 Do not create a Cloud Composer environment or leave Dataproc clusters running. They charge by the hour even when idle, and you don't need them here.
 
@@ -86,7 +91,8 @@ You may use Claude, Copilot, Gemini, ChatGPT or any other assistant. We use them
 
 ## How to submit
 
-- Commit as you go and push to this repository before the deadline. We look at the last commit before the deadline.
+- Commit as you go and push to your private copy before the deadline. We look at the last push before the deadline, so steady commits over the weekend are better than one at the end.
+- Check that `arcinsights` is a collaborator on your copy. If we can't see it, we can't review it.
 - We can't see inside your Google Cloud project, so put screenshots in `docs/screenshots/`: your BigQuery datasets, a sample of the curated table, the quarantine table and your data-quality results.
 - Keep the project running until after your call, then delete it.
 
