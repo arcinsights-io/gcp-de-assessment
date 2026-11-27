@@ -1,0 +1,27 @@
+# generated data
+output/
+
+# credentials: never commit these
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+.env
+*.pem
+*.p12
+credentials*
+*service-account*
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+.DS_Store
